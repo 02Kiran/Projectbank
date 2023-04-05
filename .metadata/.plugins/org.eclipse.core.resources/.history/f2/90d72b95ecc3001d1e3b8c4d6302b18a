@@ -1,0 +1,50 @@
+package com.ebanking.master;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class Excel
+{
+
+	public static void main(String[] args) throws IOException
+	{
+	
+		//Instance Class
+		
+		Library LB=new Library();
+		
+		LB.OpenApp("http://103.211.39.246/ranford2");
+		LB.AdninLgn("Admin","Mindq@Systems");
+		
+		//To Get Test Data File
+		
+		FileInputStream Fis=new FileInputStream("D:\\EvngProjMarch\\EBsnking\\src\\com\\ebanking\\testdata\\Role Microsoft Excel.xlsx");
+		
+		//WorkBook
+		
+		XSSFWorkbook WB=new XSSFWorkbook(Fis);
+		
+		//Sheet
+		
+		XSSFSheet WS=WB.getSheet("Rdata");
+		
+		//Row Count
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+}
+		
+		
+		
+		
+		

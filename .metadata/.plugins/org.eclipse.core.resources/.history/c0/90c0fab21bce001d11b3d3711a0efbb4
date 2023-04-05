@@ -1,0 +1,45 @@
+ # Properties for Admin Login
+
+ #ID
+ Uname=txtuId
+ Pswd=txtPword
+ #xpath
+ Lgn=//*[@id=\'login\"]
+ 
+ #Properties for Branches
+ #xpath
+ Bbutton=/html/body/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/table/tbody/tr[2]/td/a/img")).click();
+ #ID
+ NewBranch=BtnNewBR
+ BName=txtbName
+ BAdd1=txtAdd1
+ BZip=txtZip
+ BCountry=lst_counrtyU
+ BState=lst_stateI
+ BCity=lst_cityI
+ BSubmit=btn_insert
+ 
+ #Properties for Roles
+ #xpath
+ RButton=/html/body/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/table/tbody/tr[4]/td/a/img")).Click();
+ #ID
+ NewRole=btnRoles
+ RName=txtRname
+ RType=lstRtypeN
+ RSubmit=btninsert
+ 
+ #Properties for Employees
+ #xpath
+ EButton="/html/body/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/table/tbody/tr[8]/td/a/img")).click();
+ #ID
+ NewEmployee=BtnNew
+ EUName=txtUname
+ EPswd=txtLpwd
+ ERole=lst_Roles
+ EBranch=lst_Branch
+ ESubmit=BtnSubmit
+ 
+ 
+ 
+ 
+ 

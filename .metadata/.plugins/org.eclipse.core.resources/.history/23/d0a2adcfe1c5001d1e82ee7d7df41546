@@ -1,0 +1,22 @@
+# Properties for Admin Login
+
+#ID
+ Uname=txtuId
+ Pswd=txtPword
+ #Xpath
+ Lgn=//*[@id=\'login\"]
+ 
+ #Properties for Branches
+ #Xpath
+ Bbutton=/html/body/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[2]/td/table/tbody/tr[2]/td/a/img")).click();
+ #ID
+ NewBranch=BtnNewBR
+ BName=txtbName
+ Add1=txtAdd1
+ Zip=txtZip
+ Country=lst_counrtyU
+ State=lst_stateI
+ City=lst_cityI
+ 
+ #Properties for Roles
+ 

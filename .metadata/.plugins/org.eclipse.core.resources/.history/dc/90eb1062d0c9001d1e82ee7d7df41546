@@ -1,0 +1,32 @@
+package com.ebanking.master;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class RanfordHP {
+
+}
+        //Element Properties
+        @FindBy(id="txtuId")
+        Web Element Uname;
+        
+        @FindBy(id="txtPword")
+        Web Element Pswd;
+        
+        @FindBy(xpath="//*[@id=\'login\']")
+        Web Element Lgn;
+        
+        //Element Methods
+        
+        Public void Login()
+        {
+        	Uname.sendKeys("Admin")
+        	Pswd.sendKeys("Mindq@Systems");
+        	Thread.sleep(3000);
+            Lgn.click();
+        }	
+        
+        	
+        
+        
+        

@@ -1,0 +1,27 @@
+package com.ebanking.master;
+
+public class Excel {
+
+	public static void main(String[] args)
+	{
+	
+		//Instance Class
+		
+		Library LB=new Library();
+		
+		LB.OpenApp("http://103.211.39.246/ranford2");
+		LB.AdminLgn("Admin", "Mindq@Systems");
+		
+		
+		
+		
+		
+	}
+	
+	
+}
+		
+		
+		
+		
+		

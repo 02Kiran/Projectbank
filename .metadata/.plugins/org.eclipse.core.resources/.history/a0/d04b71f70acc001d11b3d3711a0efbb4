@@ -1,0 +1,82 @@
+package com.ebanking.master;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Employee {
+
+	public static void main(String[] args) throws IOException, InterruptedException
+	{
+		
+		//Instance Class
+		
+				Library LB=new Library();
+				
+				LB.OpenApp("http://103.211.39.246/ranford2");
+				LB.AdminLgn("Admin","Mindq@Systems");
+				
+				//To Get Test Data File
+				
+				FileInputStream Fis=new FileInputStream("D:\\EvngProjMarch\\EBsnking\\src\\com\\ebanking\\testdata\\Employee Excel Worksheet.xlsx");
+//WorkBook
+				
+				XSSFWorkbook WB=new XSSFWorkbook(Fis);
+				
+				//Sheet
+				
+				XSSFSheet WS=WB.getSheet("Employeedata");
+				
+				//Row Count
+				
+			int	Rcount=WS.getLastRowNum();
+			System.out.println(Rcount);
+			
+			//Multiple Iterations ...........
+			
+			for (int i=1; i<=Rcount;i++)
+			{
+				
+				//Row
+				
+				XSSFRow WR=WS.getRow(i);
+				
+				//Cell
+				
+				XSSFCell WC=WR.getCell(0);
+				XSSFCell WC1=WR.getCell(1);
+				XSSFCell WC2=WR.getCell(2);
+				XSSFCell WC3=WR.getCell(3);
+				XSSFCell WC4=WR.createCell(4);
+		
+				//Cell Values
+				String EUName=WC.getStringCellValue();
+				String EPswd=WC1.getStringCellValue();
+				String ERol=WC2.getStringCellValue();
+				String EBrach=WC3.getStringCellValue();
+				String Res=LB.Employee(EUName,EPswd,ERol,EBrach);
+				System.out.println(Res);
+			
+		
+	           //Result Column
+	           WC3.setCellValue(Res);
+			}
+	
+	           //Results Excel File
+	
+	           FileOutputStream FOS=new FileOutputStream("");
+	           WB.write(FOS);   
+	           WB.close();
+
+}
+	
+}
+
+	}
+
+}

@@ -1,0 +1,65 @@
+package com.ebanking.master;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Branch {
+
+	public static void main(String[] args)
+			{
+		
+	//Instance Class
+		
+		Library LB=new Library();
+		
+		LB.OpenApp("http://103.211.39.246/ranford2");
+		LB.AdminLgn("Admin","Mindq@Systems");
+		
+		//To Get Test Data File
+		
+		FileInputStream Fis=new FileInputStream("")
+				//WorkBook
+				
+				XSSFWorkbook WB=new XSSFWorkbook(Fis);
+				
+				//Sheet
+				
+				XSSFSheet WS=WB.getSheet("Branchdata");
+				
+				//Row Count
+				
+			int	Rcount=WS.getLastRowNum();
+			System.out.println(Rcount);
+			
+			//Multiple Iterations ...........
+			
+			for (int i=1; i<=Rcount;i++)
+			{
+				
+				//Row
+				
+				XSSFRow WR=WS.getRow(i);
+				
+				//Cell
+				
+				XSSFCell WC=WR.getCell(0);
+				XSSFCell WC1=WR.getCell(1);
+				XSSFCell WC2=WR.getCell(2);
+				XSSFCell WC3=WR.getCell(3);
+				XSSFCell WC4=WR.createCell(4);
+				
+				//Cell Values
+				String BrName=WC.getStringCellValue();
+				String Rty=.getStringCellValue();
+				
+				String Res=LB.Role(Rname, Rty);
+				System.out.println(Res);
+	}
+
+}
+	
+}

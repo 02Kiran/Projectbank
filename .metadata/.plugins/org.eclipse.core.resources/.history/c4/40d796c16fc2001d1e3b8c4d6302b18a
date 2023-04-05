@@ -1,0 +1,24 @@
+package com.ebanking.master;
+
+public class Exelib
+ { 
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		
+		//Instance Class
+		
+		Library LB=new Library();
+		
+		
+	 String Rval=LB.Launch("http://103.211.39.246/ranford2");
+	 System.out.println(Rval);
+	 Rval=LB.AdninLgn("Admin", "Mindq@Systems");
+	 System.out.println(Rval);
+     Rval=LB.Branches("Becky1234","17works","50007","INDIA","Andhra Pradesh","Hyderabad");
+     System.out.println(Rval);
+     
+		
+	
+
+
